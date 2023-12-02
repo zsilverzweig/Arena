@@ -65,9 +65,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   experience: 0
-  healthBar: {fileID: 0}
-  experienceBar: {fileID: 0}
-  endScreen: {fileID: 0}
   deadSprite: {fileID: 21300000, guid: e2731beb918dd4c0e98f8958f99e8819, type: 3}
   damageInterval: 0.3
   experienceRange: 10
@@ -188,7 +185,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: c7ee178ecc8664c439940273bfbd6308, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -332,7 +329,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: d8f8478d0050444bfa1ad35c07f05389, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
