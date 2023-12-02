@@ -6,15 +6,10 @@ using UnityEngine;
 public class Player : MonoBehaviour, ICharacter
 {
     [Header("Player Attributes")]
-    public int health = 3;
+    public int health = 1;
     public int experience = 0;
     
-    [Header("Manually Linked Objects")]
-    public HealthBar healthBar;
-    public ExperienceBar experienceBar;
-    public TMP_Text finalScore;
-    public GameObject endScreen;
-
+    // [Header("Manually Linked Objects")]
     [Header("Animation Variables")] 
     public Sprite deadSprite;
     public float damageInterval = 0.3f;
@@ -24,6 +19,11 @@ public class Player : MonoBehaviour, ICharacter
 
     private SpriteRenderer _spriteRenderer;
     private Healthy _healthy;
+    private HealthBar _healthBar;
+    private ExperienceBar _experienceBar;
+    
+    public delegate void PlayerDeath(int experience);
+    public static event PlayerDeath OnPlayerDeath;
 
     public void Start()
     {
@@ -31,9 +31,12 @@ public class Player : MonoBehaviour, ICharacter
         
         _healthy = transform.GetComponentInChildren<Healthy>();
         _healthy.Init(health);
-        healthBar.AddHealth(_healthy.health);
         
-        experienceBar.UpdateExperience(experience);
+        _healthBar = FindObjectOfType<HealthBar>();
+        _healthBar.AddHealth(_healthy.health);
+        
+        _experienceBar = FindObjectOfType<ExperienceBar>();
+        _experienceBar.UpdateExperience(experience);
     }
 
     private void OnEnable()
@@ -52,22 +55,21 @@ public class Player : MonoBehaviour, ICharacter
         if (distance <= experienceRange)
         {
             experience += mobExperience;
-            experienceBar.UpdateExperience(experience);
+            _experienceBar.UpdateExperience(experience);
         }
     }
     
     public void Die()
     {
         Debug.Log("You have been defeated! Game over.");
+
+        OnPlayerDeath?.Invoke(experience);
         _spriteRenderer.sprite = deadSprite;
-        finalScore.text = experience.ToString("D6");
-        endScreen.SetActive(true);
-        //TODO Game Controller Needs to be able to pause the game.
     }
     
     public void TakeDamageEffects(int damage)
     {
-        healthBar.TakeDamage(damage);
+        _healthBar.TakeDamage(damage);
         _spriteRenderer.color = Color.red;
         StartCoroutine(ResetColor());
     }

@@ -12,8 +12,8 @@ public class Weapon : MonoBehaviour
         {
             // Debug.Log("Not a trigger");
             Healthy healthy = collision.gameObject.GetComponentInParent<Healthy>();
-            
-            if (healthy != null)
+            var isAttacking = transform.GetComponentInParent<Attacker>().status == "attacking";
+            if (healthy != null && isAttacking)
             {
                 Debug.Log("Someone hit a Healthy thing");
                 healthy.DoDamage(damage);

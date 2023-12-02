@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Mover : MonoBehaviour
@@ -5,7 +6,7 @@ public class Mover : MonoBehaviour
     private bool _isMoving;
 
     public string facing = "right";
-    
+
     private bool IsEmpty(Vector2 direction)
     {
         // Debug.Log("Checking if empty");
@@ -19,7 +20,8 @@ public class Mover : MonoBehaviour
         for (int i = 0; i < hits; i++)
         {
             // Debug.Log("Hit: " + results[i].gameObject.name);
-            if (results[i].gameObject.GetComponentInParent<ICharacter>() != null) return false;
+            if (results[i].gameObject.GetComponentInParent<ICharacter>() != null
+            || results[i].gameObject.GetComponentInParent<Solid>()) return false;
         }
 
         return true;
