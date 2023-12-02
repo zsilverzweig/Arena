@@ -7,8 +7,7 @@ namespace Game_Management
     {
         [SerializeField] 
         private TextMeshProUGUI finalScore;
-    
-
+        
         public void SetScore(int experience)
         {
             finalScore.text = experience.ToString("D6");

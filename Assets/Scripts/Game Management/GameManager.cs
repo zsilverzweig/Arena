@@ -11,6 +11,7 @@ namespace Game_Management
         private EndScreen endScreen;
     
         private MobSpawner _mobSpawner;
+        private Cinemachine.CinemachineVirtualCamera _camera;
         
     
         private void OnEnable()
@@ -25,6 +26,7 @@ namespace Game_Management
 
         public void Start()
         {
+            _camera = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
             _mobSpawner = FindObjectOfType<MobSpawner>();
             NewGame();
         }
@@ -39,8 +41,9 @@ namespace Game_Management
             {
                 Destroy(mob.gameObject);
             }
-            Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
-
+            var player = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+            _camera.Follow = player.transform;
+            
             endScreen.gameObject.SetActive(false);
         }
         
