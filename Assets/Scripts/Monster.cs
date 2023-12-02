@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour, ICharacter
 {
+    [SerializeField]
+    public int experience = 1;
+    
     public float damageInterval = 0.3f;
     
     private SpriteRenderer _spriteRenderer;
+    private MonsterController _monsterController;
+
+    public delegate void MobDeath(Vector3 position, int experience);
+    public static event MobDeath OnMobDeath;
 
     public void Start()
     {
+        _monsterController = transform.GetComponent<MonsterController>();
         _spriteRenderer = transform.GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -22,7 +30,9 @@ public class Monster : MonoBehaviour, ICharacter
     public void Die()
     {
         Debug.Log("You have defeated the monster!");
+        OnMobDeath?.Invoke(transform.position, experience);
         Destroy(gameObject);
+        
     }
 
     private IEnumerator ResetColor()

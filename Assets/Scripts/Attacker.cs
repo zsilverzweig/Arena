@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
     public GameObject weapon;
-    public Mover mover;
     public string status = "done";
     
     [Header("UI Variables")]
@@ -19,16 +19,18 @@ public class Attacker : MonoBehaviour
     private Vector3 _attackDirection = Vector3.right;
     
     private SpriteRenderer _spriteRenderer;
+    private Mover _mover;
 
     public void Start()
     {
         _spriteRenderer = transform.GetComponentInChildren<SpriteRenderer>();
+        _mover = transform.GetComponent<Mover>();
         //Debug.Log("Found sprite renderer: " + spriteRenderer.name);
     }
     
     public void Attack()
     {
-        _attackDirection = mover.facing == "right" ? Vector3.right : Vector3.left;  
+        _attackDirection = _mover.facing == "right" ? Vector3.right : Vector3.left;  
         if (status != "attacking")
         {
             status = "attacking";

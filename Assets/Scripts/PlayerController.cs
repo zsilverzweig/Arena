@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Controller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    public Player player;
-
     private Mover _playerMover;
     private Attacker _playerAttacker;
     
     void Start()
     {
-        _playerMover = player.GetComponent<Mover>();
-        _playerAttacker = player.GetComponent<Attacker>();
+        _playerMover = transform.GetComponent<Mover>();
+        _playerAttacker = transform.GetComponent<Attacker>();
     }
 
     void Update()
@@ -25,19 +23,19 @@ public class Controller : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            _playerMover.MoveLeft();
+            _playerMover.Move(Vector3.left);
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            _playerMover.MoveRight();
+            _playerMover.Move(Vector3.right);
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            _playerMover.MoveDown();
+            _playerMover.Move(Vector3.down);
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            _playerMover.MoveUp();
+            _playerMover.Move(Vector3.up);
         }
         if (Input.GetKeyDown(KeyCode.A))
         {

@@ -7,7 +7,7 @@ using UnityEngine.TextCore.Text;
 public class Healthy : MonoBehaviour
 {
     [SerializeField]
-    int health = 3;
+    public int health = 3;
     
     SpriteRenderer _spriteRenderer;
     ICharacter _character;
@@ -15,6 +15,11 @@ public class Healthy : MonoBehaviour
     public void Start()
     {
         _character = transform.GetComponent<ICharacter>();
+    }
+    
+    public void Init(int health)
+    {
+        this.health = health;
     }
     
     public void DoDamage(int damage)

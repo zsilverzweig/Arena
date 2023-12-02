@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class MonsterController : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class MonsterController : MonoBehaviour
     private float _nextActionTime = 0f;
     public float attackDistance = 1f;
     public float speed = 1f;
-    double TOLERANCE = .3f;
+    
+    private double Tolerance { get; } = .3f;
 
     void Start()
     {
@@ -25,17 +27,16 @@ public class MonsterController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
     
-    
     void Update()
     {
         if (Time.time >= _nextActionTime)
         {
             distanceToTarget = Vector3.Distance(transform.position, player.transform.position);
-            _nextActionTime = Time.time + speed * Time.deltaTime;
+            _nextActionTime = Time.time + speed * Time.deltaTime + Random.Range(0f, .1f);
             
             if (_monsterAttacker.status != "attacking" 
                 && _monsterMover.IsFacing(player) 
-                && Math.Abs(distanceToTarget - attackDistance) < TOLERANCE)
+                && Math.Abs(distanceToTarget - attackDistance) < Tolerance)
             {
                 _monsterAttacker.Attack();
             }
