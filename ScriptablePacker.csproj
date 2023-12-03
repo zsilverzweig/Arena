@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0ef6e085-dcdd-ce12-301f-dc29357ffe07}</ProjectGuid>
+    <ProjectGuid>{8629f1cf-ea85-66c1-6bc4-712ef5f77613}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>com.unity.cinemachine.editor</AssemblyName>
+    <AssemblyName>ScriptablePacker</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -25,12 +25,12 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp\Bin\Debug\com.unity.cinemachine.editor\</OutputPath>
-    <DefineConstants>UNITY_2023_1_0;UNITY_2023_1;UNITY_2023;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CINEMACHINE_TIMELINE;CINEMACHINE_PHYSICS_2D;CINEMACHINE_PHYSICS;CINEMACHINE_UGUI;CINEMACHINE_TIMELINE_1_5_0;CINEMACHINE_UNITY_ANIMATION;CINEMACHINE_UNITY_IMGUI;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
+    <OutputPath>Temp\Bin\Debug\ScriptablePacker\</OutputPath>
+    <DefineConstants>UNITY_2023_1_0;UNITY_2023_1;UNITY_2023;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
@@ -45,96 +45,9 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2023.1.0f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/PropertyDrawers/NoiseSettingsPropertyDrawer.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachinePOVEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineBasicMultiChannelPerlinEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Windows/WaveformWindow.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Timeline/CinemachineShotEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineFramingTransposerEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Impulse/CinemachineImpulseSourceEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/InspectorUtility.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Helpers/CinemachineTriggerActionEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineColliderEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Impulse/CinemachineImpulseDefinitionPropertyDrawer.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineMixingCameraEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineHardLookAtEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Windows/CinemachineSettings.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachinePathEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/SerializedPropertyHelper.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/ScriptableObjectUtility.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/PropertyDrawers/EmbeddedAssetPropertyDrawer.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Impulse/CinemachineCollisionImpulseSourceEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/PostProcessing/CinemachineVolumeSettingsEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineTargetGroupEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Experimental/CinemachineNewFreeLookEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/PropertyDrawers/OrbitalTransposerHeadingPropertyDrawer.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineTrackedDollyEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineVirtualCameraEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/PropertyDrawers/CinemachineTagFieldPropertyDrawer.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/PropertyDrawers/CinemachineBlendDefinitionPropertyDrawer.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineOrbitalTransposerEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/SaveDuringPlay.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Windows/CinemachineColliderPrefs.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Impulse/CinemachineImpulseChannelPropertyDrawer.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Impulse/CinemachineImpulseChannels.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineFreeLookEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineClearShotEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/CinemachineSceneTools.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/PropertyDrawers/AxisStatePropertyDrawer.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Menus/CinemachineMenu.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineSameAsFollowTargetEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineConfiner2DEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/EmbeddedAssetHelpers.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineBrainEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/CinemachineLensPresets.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/ReflectionHelpers.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/BaseEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineTransposerEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Overlays/CinemachineToolbarOverlay.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineStateDrivenCameraEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineExternalCameraEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineSmoothPathEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/CinemachineEditorAnalytics.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineNoiseSettingsEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Timeline/CinemachineShotClipEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/Cinemachine3rdPersonFollowEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility/VcamStageEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Experimental/CinemachineNewVirtualCameraEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Impulse/CinemachineImpulseEnvelopePropertyDrawer.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineConfinerEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineScreenComposerGuides.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineBlenderSettingsEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineHardLockToTargetEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineBlendListCameraEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineComposerEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/PropertyDrawers/VcamTargetPropertyDrawer.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineGroupComposerEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Impulse/CinemachineImpulseListenerEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors/CinemachineStoryboardEditor.cs" />
-     <Compile Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/PostProcessing/CinemachinePostProcessingEditor.cs" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Menus" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/EditorResources" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/PropertyDrawers" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Overlays" />
-     <None Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/EditorResources/StdLib.hlsl" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor" />
-     <None Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/EditorResources/CMWaveform.shader" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Experimental" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/EditorResources/Handles/Light" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/EditorResources/Handles/Light-Selected" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/EditorResources/Handles/Dark" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Utility" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Timeline" />
-     <None Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/com.unity.cinemachine.Editor.asmdef" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/EditorResources/Handles" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Editors" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Windows" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Impulse" />
-     <None Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/EditorResources/CMWaveform.compute" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/EditorResources/Handles/Dark-Selected" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/PostProcessing" />
-     <Folder Include="Library/PackageCache/com.unity.cinemachine@2.9.7/Editor/Helpers" />
+     <Compile Include="Library/PackageCache/com.unity.2d.common@9.0.1/Editor/ScriptablePacker/SpriteAtlasScriptablePacker.cs" />
+     <Folder Include="Library/PackageCache/com.unity.2d.common@9.0.1/Editor/ScriptablePacker" />
+     <None Include="Library/PackageCache/com.unity.2d.common@9.0.1/Editor/ScriptablePacker/ScriptablePacker.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2023.1.0f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -411,38 +324,8 @@
      <Reference Include="UnityEditor.OSXStandalone.Extensions">
      <HintPath>/Applications/Unity/Hub/Editor/2023.1.0f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>/Users/silverzweig/_Projects/Game Development/Arena/Arena - Dad Version/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Collections.LowLevel.ILSupport">
-     <HintPath>/Users/silverzweig/_Projects/Game Development/Arena/Arena - Dad Version/Library/PackageCache/com.unity.collections@1.2.4/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
-     </Reference>
      <Reference Include="nunit.framework">
      <HintPath>/Users/silverzweig/_Projects/Game Development/Arena/Arena - Dad Version/Library/PackageCache/com.unity.ext.nunit@2.0.3/net40/unity-custom/nunit.framework.dll</HintPath>
-     </Reference>
-     <Reference Include="ReportGeneratorMerged">
-     <HintPath>/Users/silverzweig/_Projects/Game Development/Arena/Arena - Dad Version/Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>/Users/silverzweig/_Projects/Game Development/Arena/Arena - Dad Version/Library/PackageCache/com.unity.collab-proxy@2.0.5/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>/Users/silverzweig/_Projects/Game Development/Arena/Arena - Dad Version/Library/PackageCache/com.unity.collab-proxy@2.0.5/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
-     </Reference>
-     <Reference Include="log4netPlastic">
-     <HintPath>/Users/silverzweig/_Projects/Game Development/Arena/Arena - Dad Version/Library/PackageCache/com.unity.collab-proxy@2.0.5/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>/Users/silverzweig/_Projects/Game Development/Arena/Arena - Dad Version/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>/Users/silverzweig/_Projects/Game Development/Arena/Arena - Dad Version/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.TextureAssets">
-     <HintPath>/Users/silverzweig/_Projects/Game Development/Arena/Arena - Dad Version/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
-     </Reference>
-     <Reference Include="unityplastic">
-     <HintPath>/Users/silverzweig/_Projects/Game Development/Arena/Arena - Dad Version/Library/PackageCache/com.unity.collab-proxy@2.0.5/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="mscorlib">
      <HintPath>/Applications/Unity/Hub/Editor/2023.1.0f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/mscorlib.dll</HintPath>
@@ -821,17 +704,13 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{4e2ce077-c859-82e2-8773-16488c778055}</Project>
-      <Name>Cinemachine</Name>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{2c1bc56c-ef87-5e8c-9bba-b7721354854f}</Project>
+      <Name>Unity.Burst</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{245f867c-5e19-60b3-e45a-439a703f547e}</Project>
-      <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{db3a29c3-a14c-e7d9-4ad5-584f31e0042e}</Project>
-      <Name>Unity.Timeline.Editor</Name>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{4fc83099-2a62-da75-c54b-8dd84aa9d5b0}</Project>
+      <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{d44dc711-7421-3ecd-48ce-7d7be23ef83b}</Project>
