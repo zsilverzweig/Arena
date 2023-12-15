@@ -32,19 +32,30 @@ public class MonsterController : MonoBehaviour
         if (Time.time >= _nextActionTime)
         {
             distanceToTarget = Vector3.Distance(transform.position, player.transform.position);
-            _nextActionTime = Time.time + speed * Time.deltaTime + Random.Range(0f, .1f);
-            
-            if (_monsterAttacker.status != "attacking" 
-                && _monsterMover.IsFacing(player) 
-                && Math.Abs(distanceToTarget - attackDistance) < Tolerance)
+            _nextActionTime = Time.time + speed * Time.deltaTime + Random.Range(0f, .2f);
+                
+            if (_monsterAttacker == null)
             {
-                _monsterAttacker.Attack();
+                _monsterMover.Wander();
             }
-            else if (_monsterAttacker.status != "attacking")
+            else
             {
-                _monsterMover.MoveTowards(player);    
+                AttackOrMove();
             }
-            
+        }
+    }
+
+    private void AttackOrMove()
+    {
+        if (_monsterAttacker.status != "attacking"
+            && _monsterMover.IsFacing(player)
+            && Math.Abs(distanceToTarget - attackDistance) < Tolerance)
+        {
+            _monsterAttacker.Attack();
+        }
+        else if (_monsterAttacker.status != "attacking")
+        {
+            _monsterMover.MoveTowards(player);
         }
     }
 }

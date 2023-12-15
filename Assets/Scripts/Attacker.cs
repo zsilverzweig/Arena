@@ -9,8 +9,6 @@ public class Attacker : MonoBehaviour
     public string status = "done";
     
     [Header("UI Variables")]
-    [SerializeField]
-    float damageInterval = 0.3f;
     public float duration = 1;
     public int rotation = 60;
     public int extension = 3;
@@ -55,4 +53,5 @@ public interface ICharacter
 {
     void TakeDamageEffects(int damage);
     void Die();
+    void AddHealthEffects(int amount);
 }

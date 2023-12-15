@@ -6,7 +6,9 @@ using UnityEngine;
 public class Player : MonoBehaviour, ICharacter
 {
     [Header("Player Attributes")]
-    public int health = 1;
+    // All attributes should be included here and then passed down to the appropriate components. This section eventually will become a PlayerExperience model.
+    public int maxHealth = 6;
+    public int startingHealth = 1;
     public int experience = 0;
     
     // [Header("Manually Linked Objects")]
@@ -30,12 +32,13 @@ public class Player : MonoBehaviour, ICharacter
         _spriteRenderer = transform.GetComponentInChildren<SpriteRenderer>();
         
         _healthy = transform.GetComponentInChildren<Healthy>();
-        _healthy.Init(health);
+        _healthy.Init(startingHealth, maxHealth);
         
-        _healthBar = FindObjectOfType<HealthBar>();
-        _healthBar.AddHealth(_healthy.health);
+        _healthBar = FindAnyObjectByType<HealthBar>();
+        _healthBar.SetMaxHealth(maxHealth);
+        _healthBar.TakeDamage(maxHealth - startingHealth);
         
-        _experienceBar = FindObjectOfType<ExperienceBar>();
+        _experienceBar = FindAnyObjectByType<ExperienceBar>();
         _experienceBar.UpdateExperience(experience);
     }
 
@@ -61,7 +64,7 @@ public class Player : MonoBehaviour, ICharacter
     
     public void Die()
     {
-        Debug.Log("You have been defeated! Game over.");
+        //Debug.Log("You have been defeated! Game over.");
 
         OnPlayerDeath?.Invoke(experience);
         _spriteRenderer.sprite = deadSprite;
@@ -72,6 +75,11 @@ public class Player : MonoBehaviour, ICharacter
         _healthBar.TakeDamage(damage);
         _spriteRenderer.color = Color.red;
         StartCoroutine(ResetColor());
+    }
+    
+    public void AddHealthEffects(int amount)
+    {
+        _healthBar.Heal(amount);
     }
     
     private IEnumerator ResetColor()

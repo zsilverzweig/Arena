@@ -26,8 +26,8 @@ namespace Game_Management
 
         public void Start()
         {
-            _camera = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
-            _mobSpawner = FindObjectOfType<MobSpawner>();
+            _camera = FindAnyObjectByType<Cinemachine.CinemachineVirtualCamera>();
+            _mobSpawner = FindAnyObjectByType<MobSpawner>();
             NewGame();
         }
 
@@ -36,7 +36,7 @@ namespace Game_Management
             Debug.Log("A new journey begins...");
 
             Destroy(GameObject.FindGameObjectWithTag("Player"));
-            var mobs = GameObject.FindObjectsOfType<Attacker>();
+            var mobs = FindObjectsByType<Monster>(FindObjectsSortMode.None);
             foreach (var mob in mobs)
             {
                 Destroy(mob.gameObject);
@@ -44,6 +44,7 @@ namespace Game_Management
             var player = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
             _camera.Follow = player.transform;
             
+            FindAnyObjectByType<HealthBar>().ResetHealthbar();
             endScreen.gameObject.SetActive(false);
         }
         

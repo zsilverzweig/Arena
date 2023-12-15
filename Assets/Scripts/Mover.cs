@@ -9,23 +9,45 @@ public class Mover : MonoBehaviour
 
     private bool IsEmpty(Vector2 direction)
     {
-        // Debug.Log("Checking if empty");
         float checkRadius = 0.2f;
         Vector2 checkPosition = (Vector2)transform.position + direction;
 
-        Collider2D[] results = new Collider2D[10]; // Example size, adjust as needed
+        // Use OverlapCircle instead of OverlapCircleNonAlloc
+        Collider2D[] results = Physics2D.OverlapCircleAll(checkPosition, checkRadius);
 
-        int hits = Physics2D.OverlapCircleNonAlloc(checkPosition, checkRadius, results);
-        // Debug.Log("Hits: " + hits);
-        for (int i = 0; i < hits; i++)
+        // Iterate through the results
+        foreach (var result in results)
         {
-            // Debug.Log("Hit: " + results[i].gameObject.name);
-            if (results[i].gameObject.GetComponentInParent<ICharacter>() != null
-            || results[i].gameObject.GetComponentInParent<Solid>()) return false;
+            if (result.gameObject.GetComponentInParent<ICharacter>() != null
+                || result.gameObject.GetComponentInParent<Solid>()) 
+            {
+                return false;
+            }
         }
 
         return true;
     }
+
+    // private bool IsEmpty(Vector2 direction)
+    // {
+    //     // Debug.Log("Checking if empty");
+    //     float checkRadius = 0.2f;
+    //     Vector2 checkPosition = (Vector2)transform.position + direction;
+    //
+    //     Collider2D[] results = new Collider2D[10]; // Example size, adjust as needed
+    //
+    //     
+    //     int hits = Physics2D.OverlapCircleNonAlloc(checkPosition, checkRadius, results);
+    //     // Debug.Log("Hits: " + hits);
+    //     for (int i = 0; i < hits; i++)
+    //     {
+    //         // Debug.Log("Hit: " + results[i].gameObject.name);
+    //         if (results[i].gameObject.GetComponentInParent<ICharacter>() != null
+    //         || results[i].gameObject.GetComponentInParent<Solid>()) return false;
+    //     }
+    //
+    //     return true;
+    // }
 
     private void Flip()
     {
@@ -93,6 +115,26 @@ public class Mover : MonoBehaviour
         {
             return false;
 
+        }
+    }
+
+    public void Wander()
+    {
+        var direction = Random.Range(0, 4);
+        switch (direction)
+        {
+            case 0:
+                Move(Vector3.up);
+                break;
+            case 1:
+                Move(Vector3.down);
+                break;
+            case 2:
+                Move(Vector3.left);
+                break;
+            case 3:
+                Move(Vector3.right);
+                break;
         }
     }
 }
