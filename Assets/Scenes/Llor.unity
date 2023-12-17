@@ -2445,7 +2445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   evilMobPrefab: {fileID: 6112181954308461333, guid: d85614543a55d480c884f7f4f112d2f2, type: 3}
   friendlyMobPrefab: {fileID: 1298307106400523401, guid: 5d497a19e7eba4d02bbe3176eb728795, type: 3}
-  evilProbability: 0.8
+  evilProbability: 0.81
   mobSpawnInterval: 175
   arenaMode: 1
   active: 1
