@@ -20,7 +20,7 @@ namespace Editor
             int hourOfDay = now.Hour;
             int secondOfMinute = now.Second;
 
-            string version = $"{yearsSince2016}.{dayOfYear}.{hourOfDay} ({secondOfMinute})";
+            string version = $"{yearsSince2016}.{dayOfYear}.{hourOfDay}.{secondOfMinute}";
             PlayerSettings.bundleVersion = version;
             Debug.Log("Updated version number to: " + version);
         }
