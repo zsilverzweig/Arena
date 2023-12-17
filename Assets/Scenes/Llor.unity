@@ -203,8 +203,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Mover, Assembly-CSharp
+      - m_Target: {fileID: 1278889210}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: MoveDown
         m_Mode: 1
         m_Arguments:
@@ -780,8 +780,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Mover, Assembly-CSharp
+      - m_Target: {fileID: 1278889210}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: MoveLeft
         m_Mode: 1
         m_Arguments:
@@ -2445,8 +2445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   evilMobPrefab: {fileID: 6112181954308461333, guid: d85614543a55d480c884f7f4f112d2f2, type: 3}
   friendlyMobPrefab: {fileID: 1298307106400523401, guid: 5d497a19e7eba4d02bbe3176eb728795, type: 3}
-  evilProbability: 0
-  mobSpawnInterval: 200
+  evilProbability: 0.8
+  mobSpawnInterval: 175
   arenaMode: 1
   active: 1
 --- !u!114 &962609717
@@ -4954,6 +4954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1278889209}
+  - component: {fileID: 1278889210}
   m_Layer: 5
   m_Name: Player UI
   m_TagString: Untagged
@@ -4985,6 +4986,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -60, y: -60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1278889210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278889208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5840c0ed11544dbaa695cf27aff9e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1279870244
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,8 +5081,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Attacker, Assembly-CSharp
+      - m_Target: {fileID: 1278889210}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: Attack
         m_Mode: 1
         m_Arguments:
@@ -5201,8 +5214,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Mover, Assembly-CSharp
+      - m_Target: {fileID: 1278889210}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: MoveUp
         m_Mode: 1
         m_Arguments:
@@ -5334,8 +5347,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Mover, Assembly-CSharp
+      - m_Target: {fileID: 1278889210}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: MoveRight
         m_Mode: 1
         m_Arguments:

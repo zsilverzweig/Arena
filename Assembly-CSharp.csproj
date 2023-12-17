@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/MobSpawner.cs" />
      <Compile Include="Assets/Scripts/Mover.cs" />
+     <Compile Include="Assets/InputManager.cs" />
      <Compile Include="Assets/Scripts/MonsterController.cs" />
      <Compile Include="Assets/Scripts/HealthBar.cs" />
      <Compile Include="Assets/Scripts/Game Management/EndScreen.cs" />
