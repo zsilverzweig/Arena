@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/Editor/HealthyInspector.cs" />
-     <Compile Include="Assets/Scripts/Editor/VersionSaver.cs" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.5/Lib/Editor/PlasticSCM/Localization/clientcommon.ja.txt" />
      <Folder Include="Library/PackageCache/com.unity.collab-proxy@2.0.5/Lib/Editor/PlasticSCM/Localization" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.5/Lib/Editor/PlasticSCM/Localization/i3.es.txt" />
