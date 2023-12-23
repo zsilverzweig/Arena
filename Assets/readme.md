@@ -6,8 +6,14 @@ Dec 3, 2023
 - [X] Enable camera to shift to follow player when at the edge of the map
 - [X] Add black hearts for damage, red hearts for health
 - [X] Add a chicken mob, that drops chicken meat
-- [ ] Eating chicken gives you a heart, up to full hearts
-- 
+- [X] Eating chicken gives you a heart, up to full hearts
+
+Dec 23, 2023
+- [ ] Make prefab for MobSpawner
+- [ ] Make mobs destroy themselves if they are not nearby after a certain period of time
+- [ ] Implement pooling for blazing fast performance
+- [ ] Create animated sprite for main character
+- [ ] Add Attacking main-sprite animation capability
 
 - [ ] Make Loot into a Serialized field?
 - [ ] Draw mountain sprites

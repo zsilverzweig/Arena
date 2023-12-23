@@ -49,6 +49,7 @@
      <Compile Include="Assets/Scripts/Mover.cs" />
      <Compile Include="Assets/InputManager.cs" />
      <Compile Include="Assets/Scripts/MonsterController.cs" />
+     <Compile Include="Assets/Body.cs" />
      <Compile Include="Assets/Scripts/HealthBar.cs" />
      <Compile Include="Assets/Scripts/Game Management/EndScreen.cs" />
      <Compile Include="Assets/Scripts/Game Management/FinalScore.cs" />
@@ -101,6 +102,7 @@
      <Folder Include="Assets/Assets/Loot" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
      <None Include="Library/PackageCache/com.unity.textmeshpro@3.0.6/package.json" />
+     <Folder Include="Assets/Prefabs/Creatures" />
      <None Include="Library/PackageCache/com.unity.modules.imgui@1.0.0/package.json" />
      <Folder Include="Library/PackageCache/com.unity.visualscripting@1.8.0/Graphics" />
      <None Include="Library/PackageCache/com.unity.modules.tilemap@1.0.0/package.json" />

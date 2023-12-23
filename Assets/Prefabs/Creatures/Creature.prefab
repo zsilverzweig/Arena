@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 380683133996596728}
   - component: {fileID: 8666191107473082538}
   - component: {fileID: 3509500377567660275}
+  - component: {fileID: 6872766628072661039}
   m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346290497088804783}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7734815488424640977}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &380683133996596728
 SpriteRenderer:
@@ -94,6 +95,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346290497088804783}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -117,7 +119,8 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: -0.02, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,7 +131,6 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 0.41, y: 0.5416667}
   m_EdgeRadius: 0
 --- !u!50 &3509500377567660275
@@ -158,6 +160,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6872766628072661039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346290497088804783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc26119ab09443088dec9ece576b8e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6530263635730746448
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,13 +198,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6530263635730746448}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.39273837, w: 0.9196503}
   m_LocalPosition: {x: 0.34, y: 0.12, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7734815488424640977}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 46.25}
 --- !u!212 &7528793741341837578
 SpriteRenderer:
@@ -252,6 +266,7 @@ CircleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6530263635730746448}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -275,9 +290,9 @@ CircleCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0.04, y: 0.05}
-  serializedVersion: 2
   m_Radius: 0.1
 --- !u!114 &5917854800808836498
 MonoBehaviour:
@@ -320,7 +335,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8728485536305117129}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -329,6 +343,7 @@ Transform:
   - {fileID: 5548118365140788566}
   - {fileID: 6373626795715215456}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4299004393953302114
 MonoBehaviour:
@@ -343,6 +358,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   experience: 1
+  health: 1
+  maxHealth: 3
+  loot: {fileID: 0}
+  lootDropRate: 0.5
   damageInterval: 0.3
 --- !u!114 &1115912461313398351
 MonoBehaviour:
@@ -371,10 +390,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 6530263635730746448}
   status: done
-  damageInterval: 0.3
   duration: 1
   rotation: 50
   extension: 5
+  attackingSprite: {fileID: 0}
 --- !u!114 &1412883739430277946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,7 +409,7 @@ MonoBehaviour:
   player: {fileID: 0}
   distanceToTarget: 0
   attackDistance: 1
-  speed: 100
+  timeBetweenMovement: 1
 --- !u!114 &4721145241395705327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,3 +423,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  maxHealth: 3
