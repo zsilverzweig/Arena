@@ -16,7 +16,7 @@ public class MonsterController : MonoBehaviour
     
     private float _nextActionTime = 0f;
     public float attackDistance = 1f;
-    public float speed = 1f;
+    public float timeBetweenMovement = 1f;
     
     private double Tolerance { get; } = .3f;
 
@@ -31,9 +31,10 @@ public class MonsterController : MonoBehaviour
     {
         if (Time.time >= _nextActionTime)
         {
+            
             distanceToTarget = Vector3.Distance(transform.position, player.transform.position);
-            _nextActionTime = Time.time + speed * Time.deltaTime + Random.Range(0f, .2f);
-                
+            _nextActionTime = Time.time + timeBetweenMovement + Random.Range(0f, .2f);
+            
             if (_monsterAttacker == null)
             {
                 _monsterMover.Wander();

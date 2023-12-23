@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: speed
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 1412883739430277946, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
+      propertyPath: timeBetweenMovement
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4299004393953302114, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
       propertyPath: loot
       value: 

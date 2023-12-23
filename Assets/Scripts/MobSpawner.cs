@@ -9,9 +9,11 @@ public class MobSpawner : MonoBehaviour
     [FormerlySerializedAs("mobPrefab")] [SerializeField] GameObject evilMobPrefab;
     [SerializeField] GameObject friendlyMobPrefab;
     [SerializeField] float evilProbability = 0.8f;
-    [SerializeField] int mobSpawnInterval = 125;
+    [SerializeField] int mobSpawnInterval = 10;
     [SerializeField] private bool arenaMode = true;
+    
     [SerializeField] private bool active = true;
+    private float _lastSpawn;
     
     private void OnEnable()
     {
@@ -23,10 +25,18 @@ public class MobSpawner : MonoBehaviour
         Monster.OnMobDeath -= QuickenSpawner;
     }
 
+    void Start()
+    {
+        _lastSpawn = Time.realtimeSinceStartup;
+    }
+    
     void Update()
     {
-        if (active && Time.frameCount % (mobSpawnInterval) == 0)
+        if (!active) { return; }
+        
+        if (Time.realtimeSinceStartup - _lastSpawn > mobSpawnInterval)
         {
+            _lastSpawn = Time.realtimeSinceStartup;
             GameObject newMob = Instantiate(GetMob(), Vector3.zero, Quaternion.identity);
             
             var xModifier = Random.Range(0, 2) * 2 - 1;
