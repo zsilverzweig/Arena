@@ -3,8 +3,20 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField]
-    private int damage = 1;
+    public int damage = 1;
+    public int rotation = 60;
+    public int extension = 3;
+    public float duration = 1;
 
+    public void Init (int damage, Sprite sprite, int rotation, int extension, float duration)
+    {
+        this.damage = damage;
+        this.duration = duration;
+        this.rotation = rotation;
+        this.extension = extension;
+        if (sprite != null) GetComponent<SpriteRenderer>().sprite = sprite;
+    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Debug.Log("OnTriggerEnter2D");

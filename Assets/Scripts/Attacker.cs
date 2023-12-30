@@ -5,56 +5,49 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
-    public GameObject weapon;
     public string status = "done";
     
-    [Header("UI Variables")]
-    public float duration = 1;
-    public int rotation = 60;
-    public int extension = 3;
-    public Sprite attackingSprite;
-    
-    private Time _startTime;
-    private Vector3 _attackDirection = Vector3.right;
-    
-    private SpriteRenderer _spriteRenderer;
+    private float _attackDuration;
+    private Weapon _weapon;
+    private Body _body;
     private Mover _mover;
-    private SpriteRenderer _bodySprite;
+    private Sprite _attackingSprite;
     private Sprite _initialSprite; // This is nice in case we want to update sprites with damage.
-    private bool _animateAttack; 
+     
+    private bool _animateAttack = false;
+    private Vector3 _attackDirection = Vector3.right;
 
-    public void Start()
+    
+    public void Init(Sprite initialSprite, Sprite attackingSprite, Weapon weapon, Body body, float attackDuration)
     {
-        if (attackingSprite != null) _animateAttack = true;
-
-        if (_animateAttack)
-        {
-            Body body = transform.GetComponentInChildren<Body>();
-            _bodySprite = body.transform.GetComponent<SpriteRenderer>();
-        }
-        
         _mover = transform.GetComponent<Mover>();
+        _attackDuration = attackDuration;
+        _initialSprite = initialSprite;
+        _attackingSprite = attackingSprite;
+        _weapon = weapon;
+        _body = body;
         
-        
-        //Debug.Log("Found sprite renderer: " + spriteRenderer.name);
+        if (attackingSprite != null && _weapon == null) _animateAttack = true;
     }
     
     public void Attack()
     {
-        
         _attackDirection = _mover.facing == "right" ? Vector3.right : Vector3.left;  
         if (status != "attacking")
         {
             status = "attacking";
             if (_animateAttack)
             {
-                _initialSprite = _bodySprite.sprite;
                 Debug.Log("I'm attacking you with an animation");
-                _bodySprite.sprite = attackingSprite;
+                _body.SetSprite(_attackingSprite);
             }
-            
-            weapon.transform.Rotate(Vector3.forward,-rotation);
-            weapon.transform.position += _attackDirection / extension;
+
+            if (_weapon != null)
+            {
+                _weapon.transform.Rotate(Vector3.forward,-_weapon.rotation);
+                _weapon.transform.position += _attackDirection * _weapon.extension / 100;
+
+            }
             StartCoroutine(ReturnToReadyPosition());    
         }
         
@@ -62,12 +55,16 @@ public class Attacker : MonoBehaviour
     
     private IEnumerator ReturnToReadyPosition()
     {
-        yield return new WaitForSeconds(duration); // Wait for one second
-        weapon.transform.Rotate(Vector3.forward, rotation);
-        weapon.transform.position -= _attackDirection / extension;
+        yield return new WaitForSeconds(_attackDuration);
+        if (_weapon != null)
+        {
+            _weapon.transform.Rotate(Vector3.forward, _weapon.rotation);
+            _weapon.transform.position -= _attackDirection * _weapon.extension / 100;
+        }
+
         if (_animateAttack)
         {
-            _bodySprite.sprite = _initialSprite;
+            _body.SetSprite(_initialSprite);
         }
         status = "done";
     }

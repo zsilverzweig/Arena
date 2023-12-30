@@ -1,39 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
+using Scriptable_Objects;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Monster : MonoBehaviour, ICharacter
 {
-    [SerializeField]
-    public int experience = 1;
-    public int health = 1;
-    public int maxHealth = 3;
+    public MonsterDataSO monster;
     
-    [SerializeField]
-    public Loot loot;
-    public float lootDropRate = 0.5f;
-    
-    public float damageInterval = 0.3f;
-    
-    private SpriteRenderer _spriteRenderer;
     private Healthy _healthy;
     private MonsterController _monsterController;
+    private Weapon _weapon;
+    private Body _body;
+    private Attacker _attacker;
 
     public delegate void MobDeath(Vector3 position, int experience);
     public static event MobDeath OnMobDeath;
 
     public void Start()
     {
-        _healthy = transform.GetComponent<Healthy>();
-        _healthy.Init(health, maxHealth);
         _monsterController = transform.GetComponent<MonsterController>();
-        _spriteRenderer = transform.GetComponentInChildren<SpriteRenderer>();
+        _monsterController.Init(monster.attackDistance, monster.timeBetweenMovement);
+        _body = transform.GetComponentInChildren<Body>();
+        _body.Init(monster.sprite);
+        _weapon = transform.GetComponentInChildren<Weapon>();
+        if (_weapon != null) _weapon.Init(monster.damage, monster.weaponSprite, monster.rotation, monster.extension, monster.attackDuration);         
+        _attacker = transform.GetComponent<Attacker>();
+        if (_attacker != null) _attacker.Init(monster.sprite, monster.attackingSprite, _weapon, _body, monster.attackDuration);
+        _healthy = transform.GetComponent<Healthy>();
+        _healthy.Init(monster.health, monster.maxHealth);
     }
 
     public void TakeDamageEffects(int damage)
     {
-        _spriteRenderer.color = Color.red;
-        StartCoroutine(ResetColor());
+        _body.TakeDamageEffects();
     }
     
     public void AddHealthEffects(int amount)
@@ -44,17 +44,11 @@ public class Monster : MonoBehaviour, ICharacter
     public void Die()
     {
         Debug.Log("You have defeated the monster!");
-        if (loot != null)
+        if (monster.loot != null)
         {
-            if (Random.Range(0f, 1f) < lootDropRate) Instantiate(loot, transform.position, Quaternion.identity);
+            if (Random.Range(0f, 1f) < monster.lootDropRate) Instantiate(monster.loot, transform.position, Quaternion.identity);
         }
-        OnMobDeath?.Invoke(transform.position, experience);
+        OnMobDeath?.Invoke(transform.position, monster.experience);
         Destroy(gameObject);
-    }
-
-    private IEnumerator ResetColor()
-    {
-        yield return new WaitForSeconds(damageInterval);
-        _spriteRenderer.color = Color.white;
     }
 }

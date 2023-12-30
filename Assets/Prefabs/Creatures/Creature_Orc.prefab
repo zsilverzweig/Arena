@@ -8,10 +8,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 380683133996596728, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ca2e32ede6934252b82459abe94f1a5, type: 3}
     - target: {fileID: 1412883739430277946, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
       propertyPath: speed
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 4721145241395705327, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721145241395705327, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528793741341837578, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
+      propertyPath: m_Size.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528793741341837578, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
+      propertyPath: m_Size.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528793741341837578, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 95c42eae6f9244219b1f9d69e81003cc, type: 3}
     - target: {fileID: 7734815488424640977, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
       propertyPath: m_RootOrder
       value: 0

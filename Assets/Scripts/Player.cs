@@ -10,9 +10,15 @@ public class Player : MonoBehaviour, ICharacter
     public int maxHealth = 6;
     public int startingHealth = 1;
     public int experience = 0;
+    public float attackDuration = 0.4f;
+    public int damage;
+    public int rotation;
+    public int extension;
     
     // [Header("Manually Linked Objects")]
     [Header("Animation Variables")] 
+    public Sprite sprite;
+    public Sprite attackingSprite;
     public Sprite deadSprite;
     public float damageInterval = 0.3f;
     
@@ -23,6 +29,9 @@ public class Player : MonoBehaviour, ICharacter
     private Healthy _healthy;
     private HealthBar _healthBar;
     private ExperienceBar _experienceBar;
+    private Weapon _weapon;
+    private Body _body;
+    private Attacker _attacker;
     
     public delegate void PlayerDeath(int experience);
     public static event PlayerDeath OnPlayerDeath;
@@ -40,6 +49,12 @@ public class Player : MonoBehaviour, ICharacter
         
         _experienceBar = FindAnyObjectByType<ExperienceBar>();
         _experienceBar.UpdateExperience(experience);
+        
+        _weapon = transform.GetComponentInChildren<Weapon>();
+        _weapon.Init(damage, null, rotation, extension, attackDuration);
+        _attacker = transform.GetComponent<Attacker>();
+        _attacker.Init(sprite, attackingSprite, _weapon, _body, attackDuration);
+        
     }
 
     private void OnEnable()

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e8293a15b31349e5a643adecdc02b16, type: 3}
+  m_Name: Chicken
+  m_EditorClassIdentifier: 
+  monsterName: Monster
+  sprite: {fileID: 21300000, guid: e2bb58c461ed14ae69b927831ec86215, type: 3}
+  attackingSprite: {fileID: 0}
+  weaponSprite: {fileID: 0}
+  experience: 0
+  health: 1
+  maxHealth: 1
+  attackDistance: 0
+  attackDuration: 0
+  timeBetweenMovement: 0.3
+  damage: 0
+  rotation: 60
+  extension: 3
+  xOffset: 0
+  yOffset: 0
+  loot: {fileID: 242390306014235789, guid: c948b97a1befc4e9bbeddee611066204, type: 3}
+  lootDropRate: 0.5

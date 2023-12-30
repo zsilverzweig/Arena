@@ -66,6 +66,12 @@ MonoBehaviour:
   maxHealth: 6
   startingHealth: 3
   experience: 0
+  attackDuration: 0.4
+  damage: 1
+  rotation: 60
+  extension: 30
+  sprite: {fileID: 0}
+  attackingSprite: {fileID: 0}
   deadSprite: {fileID: 21300000, guid: e2731beb918dd4c0e98f8958f99e8819, type: 3}
   damageInterval: 0.3
   experienceRange: 10
@@ -81,11 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89a0a5628f1545ea811959c76ff04a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 7612164637915441193}
   status: done
-  duration: 1
-  rotation: 60
-  extension: 3
 --- !u!114 &3523969017348831572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +259,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  rotation: 60
+  extension: 3
+  duration: 1
 --- !u!1 &8671772313733477094
 GameObject:
   m_ObjectHideFlags: 0

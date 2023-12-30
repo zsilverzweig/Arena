@@ -25,6 +25,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 242390306014235789, guid: c948b97a1befc4e9bbeddee611066204, type: 3}
     - target: {fileID: 4299004393953302114, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
+      propertyPath: monster
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ec1870144fc24fff8d37b1d574fd3ae, type: 2}
+    - target: {fileID: 4299004393953302114, guid: a8de235a113454c26bd7d89aa1af5578, type: 3}
       propertyPath: experience
       value: 0
       objectReference: {fileID: 0}

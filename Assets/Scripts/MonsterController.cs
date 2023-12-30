@@ -59,5 +59,11 @@ public class MonsterController : MonoBehaviour
             _monsterMover.MoveTowards(player);
         }
     }
+
+    public void Init(float distance, float time)
+    {
+        attackDistance = distance;
+        timeBetweenMovement = time;
+    }
 }
 
